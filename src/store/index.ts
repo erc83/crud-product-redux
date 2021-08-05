@@ -1,5 +1,6 @@
 import { createStore, combineReducers, compose } from 'redux'
 import userReducer from './users/index'
+import productReducer from './products/index'
 
 declare global {
     interface Window {
@@ -9,6 +10,7 @@ declare global {
 
 const rootReducer = combineReducers({
     users: userReducer,
+    product: productReducer,
 })
 
 const store = createStore(

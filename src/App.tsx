@@ -7,6 +7,10 @@ import UserList from './containers/user-list/UserList'
 import store from './store/index'
 import UserCreate from './containers/user-create/UserCreate';
 import UserDetail from './containers/user-detail/UserDetail';
+import ProductList from './containers/product-list/ProductList';
+import ProductDetail from './containers/product-detail/ProductDetail'
+import ProductCreate from './containers/product-create/ProductCreate'
+import ProductUpdate from './containers/product-update/ProductUpdate'
 
 
 function App() {
@@ -25,6 +29,25 @@ function App() {
           <Route path='/detail/:id'>
             <UserDetail />
           </Route>
+
+          <Route path="/products" exact>
+            <ProductList />
+          </Route>
+
+          <Route path="/products/create">
+            <ProductCreate />
+          </Route>
+
+          <Route path="/products/detail">
+            <ProductDetail />
+          </Route>
+
+          <Route path="/products/update">
+            <ProductUpdate />
+          </Route>
+          
+
+
         </Router>
       </Provider>
     </div>
