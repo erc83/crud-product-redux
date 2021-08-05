@@ -12,12 +12,12 @@ const ProductCreate = () => {
     const dispatch = useDispatch()
     const history = useHistory()
 
-    const handlerSave = (event: any) => {
+    const handlerSaveProduct = (event: any) => {
         event.preventDefault()
         dispatch(createProductAction({
             id: new Date().getTime(),
-            precio,
             nombre,
+            precio,
             descripcion,
             color
         }))
@@ -36,7 +36,7 @@ const ProductCreate = () => {
                             </Link>
                         </div>
                     </div>
-                    <form onSubmit={handlerSave}>
+                    <form onSubmit={handlerSaveProduct}>
                         <div className="card-body">
                             <label>Nombre</label>
                             <input  className="form-control"
@@ -52,8 +52,9 @@ const ProductCreate = () => {
                             />
 
                             <label>Descripcion</label>
-                            <textarea
+                            <input
                                     className="form-control"
+                                    type="text"
                                     value={descripcion}
                                     onChange={handlerDescripcion}
                             />

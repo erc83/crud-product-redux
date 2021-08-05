@@ -4,10 +4,10 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
 import UserList from './containers/user-list/UserList'
+import ProductList from './containers/product-list/ProductList';
 import store from './store/index'
 import UserCreate from './containers/user-create/UserCreate';
 import UserDetail from './containers/user-detail/UserDetail';
-import ProductList from './containers/product-list/ProductList';
 import ProductDetail from './containers/product-detail/ProductDetail'
 import ProductCreate from './containers/product-create/ProductCreate'
 import ProductUpdate from './containers/product-update/ProductUpdate'
@@ -46,8 +46,6 @@ function App() {
             <ProductUpdate />
           </Route>
           
-
-
         </Router>
       </Provider>
     </div>
