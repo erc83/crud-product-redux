@@ -1,17 +1,16 @@
-
 import {  useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { productListSelector } from '../../store/products/selectors'
-import { deleteProductAction } from '../../store/products/actions'
 
+// import { deleteProductAction } from '../../store/products/actions'
 
 const ProductList = () => {
     const productList = useSelector(productListSelector)
-    const dispatch = useDispatch()
+    // const dispatch = useDispatch()
 
-    const handlerDelete = (id:any) => {
-        dispatch(deleteProductAction(id))
-    }
+    // const handlerDelete = (id:any) => {
+    //     dispatch(deleteProductAction(id))
+    // }
 
     return (
         <div className="row">
@@ -50,10 +49,11 @@ const ProductList = () => {
                                                 <td>{p.descripcion}</td>
                                                 <td>{p.color}</td>
                                                 <td className="text-end">
-                                                    <div className="btn-group">
-                                                        <button className="btn btn-sm btn-danger"
-                                                                onClick={()=> handlerDelete(p.id)}
-                                                        > Eliminar </button>
+                                                    <div className="btn-group m-auto">
+                                                        <Link className="btn btn-sm btn-primary" to={`/products/update/${p.id}`}>
+                                                            Actualizar
+                                                        </Link>
+                                                        
 
                                                         <Link className="btn btn-sm btn-primary" to={`/products/detail`}>
                                                             Detalle

@@ -42,7 +42,7 @@ function App() {
             <ProductDetail />
           </Route>
 
-          <Route path="/products/update">
+          <Route path="/products/update/:id">
             <ProductUpdate />
           </Route>
           
