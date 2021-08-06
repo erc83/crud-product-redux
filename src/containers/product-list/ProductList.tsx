@@ -2,15 +2,15 @@ import {  useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { productListSelector } from '../../store/products/selectors'
 
-// import { deleteProductAction } from '../../store/products/actions'
+import { deleteProductAction } from '../../store/products/actions'
 
 const ProductList = () => {
     const productList = useSelector(productListSelector)
-    // const dispatch = useDispatch()
+    const dispatch = useDispatch()
 
-    // const handlerDelete = (id:any) => {
-    //     dispatch(deleteProductAction(id))
-    // }
+    const handlerDelete = (id:any) => {
+        dispatch(deleteProductAction(id))
+    }
 
     return (
         <div className="row">
@@ -55,7 +55,7 @@ const ProductList = () => {
                                                         </Link>
                                                         
 
-                                                        <Link className="btn btn-sm btn-primary" to={`/products/detail`}>
+                                                        <Link className="btn btn-sm btn-primary" to={`/products/detail/${p.id}`}>
                                                             Detalle
                                                         </Link>
                                                     </div>

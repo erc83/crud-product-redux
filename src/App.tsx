@@ -38,7 +38,7 @@ function App() {
             <ProductCreate />
           </Route>
 
-          <Route path="/products/detail">
+          <Route path="/products/detail/:id">
             <ProductDetail />
           </Route>
 
