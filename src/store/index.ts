@@ -11,6 +11,7 @@ declare global {
 const rootReducer = combineReducers({
     products: productReducer,
     users: userReducer,
+    
 })
 
 const store = createStore(

@@ -14,7 +14,7 @@ const ProductDetail = () => {
 
     const [nombre, handlerNombre, setNombre] = useInput('')
     const [precio, handlerPrecio, setPrecio] = useInput('')
-    const [descripcion, handlerDescripcion, setDescripcion] =useInput('')
+    const [descripcion, handlerDescripcion, setDescripcion] = useInput('')
     const [color, handlerColor, setColor] = useInput('')
 
 
@@ -55,9 +55,9 @@ const ProductDetail = () => {
                     </div>
                     <div className="card-footer">
                          <div className="btn-group">
-                            <button className="btn btn-sm btn-danger"
-                                    onClick={() => handlerDelete(id)}
-                                    >Delete</button>
+                         <button
+								className="btn btn-sm btn-outline-danger"
+                                onClick={() => handlerDelete(parseInt(id))}> Delete </button>
                         </div>
                     </div>
                 </div>
